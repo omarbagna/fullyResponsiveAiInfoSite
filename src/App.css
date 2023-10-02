@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    font-family: var(--font-family);
+    color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-subtext-alt);
+  border-radius: .5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-subtext);
+}
+
+body {
+    background: var(--color-bg);
+}
+
+a {
+    color: unset;
+    text-decoration: none;
+    transition: 0.3s ease-in;
+}
+
+a:hover {
+  color: var(--color-subtext);
+}
+
+.gradient__bg {
+    /* ff 3.6+ */
+    background:-moz-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+
+    /* safari 5.1+,chrome 10+ */
+    background:-webkit-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+
+    /* opera 11.10+ */
+    background:-o-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+
+    /* ie 10+ */
+    background:-ms-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+
+    /* global 92%+ browsers support */
+    background:radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 100%);
+}
+
+.gradient__text {
+    background: var(--gradient-text);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.section__padding {
+    padding: 4rem 6rem;
+}
+
+.section__margin {
+    margin: 4rem 6rem;
+}
+
+
+.scale-up-right {
+	-webkit-animation: scale-up-right 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-right 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+
+@-webkit-keyframes scale-up-right {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+      -webkit-transform-origin: 100% 50%;
+              transform-origin: 100% 50%;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: 100% 50%;
+              transform-origin: 100% 50%;
+    }
+}
+
+@keyframes scale-up-right {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+      -webkit-transform-origin: 100% 50%;
+              transform-origin: 100% 50%;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: 100% 50%;
+              transform-origin: 100% 50%;
+    }
+}
+  
+
+@media screen and (max-width: 700px){
+      .section__padding {
+          padding: 4rem;
+      }
+      
+      .section__margin {
+        margin: 4rem;
+    }
+}
+
+
+@media screen and (max-width: 500px){
+    .section__padding {
+        padding: 4rem 2rem;
+    }
+    
+    .section__margin {
+      margin: 4rem 2rem;
+  }
+}
